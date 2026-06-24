@@ -55,7 +55,7 @@ public class FlussTypeToPojoTypeConverter {
             return null;
         }
 
-        String v = s.toString();
+        String v = s.toString().toUpperCase();
         if (pojoType == String.class) {
             if (fieldType.getTypeRoot() == DataTypeRoot.CHAR && v.length() != 1) {
                 throw new IllegalArgumentException(
